@@ -20,4 +20,17 @@ page-register {
         font-size: 5vw;
         color: #1e99d0;
     }
+    .tombol {
+        height: 7vw !important;
+        color: gray;
+
+        position: relative;
+        top: 5vw;
+        // width: 100%;
+    }
+    .icon {
+        font-size:7vw;
+        
+        float:right;
+    }
 }

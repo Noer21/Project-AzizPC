@@ -12,41 +12,41 @@
 <ion-content padding>
   <h2 class="title">Get In Touch With Us</h2>
 
-  <!-- <form #loginForm="ngForm" novalidate>
+  <form #registerForm="ngForm" novalidate>
       <ion-list >
         <ion-item>
           <ion-label floating><p class="Head">Nama</p></ion-label>
-          <ion-input class="Head2" [(ngModel)]="name" name="name" type="text" #name="ngModel" spellcheck="false" autocapitalize="off"
+          <ion-input class="Head2" [(ngModel)]="name" name="name" type="text" #nama="ngModel" spellcheck="false" autocapitalize="off"
             required>
           </ion-input>
         </ion-item>
-        <p ion-text [hidden]="name.valid || submitted == false" color="danger" padding-left class="Warning">
+        <p ion-text [hidden]="nama.valid || submitted == false" color="danger" padding-left class="Warning">
         Nama harus diisi
         </p>
 
         <ion-item>
           <ion-label floating><p class="Head">Email</p></ion-label>
-          <ion-input class="Head2" [(ngModel)]="email" name="email" type="email" #email="ngModel" spellcheck="false" autocapitalize="off"
+          <ion-input class="Head2" [(ngModel)]="email" name="email" pattern="[^@\]+@[^@\]+\.[^@\s]+" type="email" #mail="ngModel" spellcheck="false" autocapitalize="off"
             required>
           </ion-input>
         </ion-item>
-        <p ion-text [hidden]="email.valid || submitted == false" color="danger" padding-left class="Warning">
+        <p ion-text [hidden]="mail.valid || submitted == false" color="danger" padding-left class="Warning">
         Email harus diisi
         </p>
 
         <ion-item>
             <ion-label floating><p class="Head">Nomor Handphone</p></ion-label>
-            <ion-input class="Head2" [(ngModel)]="number" name="number" type="number" #number="ngModel" spellcheck="false" autocapitalize="off"
+            <ion-input class="Head2" [(ngModel)]="number" name="number" type="number" #nomor="ngModel" spellcheck="false" autocapitalize="off"
               required>
             </ion-input>
           </ion-item>
-          <p ion-text [hidden]="number.valid || submitted == false" color="danger" padding-left class="Warning">
+          <p ion-text [hidden]="nomor.valid || submitted == false" color="danger" padding-left class="Warning">
           Nomor Handphone harus diisi
           </p>
   
         <ion-item>
           <ion-label floating><p class="Head">Password</p></ion-label>
-          <ion-input class="Head2"  [(ngModel)]="password" name="pass" type="{{status}}" #pass="ngModel"  required>
+          <ion-input class="Head2"  [(ngModel)]="password" name="password" type="{{status}}" #pass="ngModel"  required>
           </ion-input>
           <button class="tombol" [hidden]="lihat == false" (click)="showPassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class='icon' color="primary2"> </ion-icon> </button>
           <button class="tombol" [hidden]="lihat == true" (click)="hidePassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class='icon' color="primary2"> </ion-icon> </button>
@@ -54,11 +54,22 @@
         <p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left class="Warning">
           Password harus diisi
         </p>
+
+        <ion-item>
+          <ion-label floating><p class="Head">Konfirmasi Password</p></ion-label>
+          <ion-input class="Head2"  [(ngModel)]="password2" name="password2" type="{{status2}}" #pass2="ngModel"  required>
+          </ion-input>
+          <button class="tombol" [hidden]="lihat2 == false" (click)="showPassword2()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class='icon' color="primary2"> </ion-icon> </button>
+          <button class="tombol" [hidden]="lihat2 == true" (click)="hidePassword2()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class='icon' color="primary2"> </ion-icon> </button>
+        </ion-item>
+        <div ion-text [hidden]="password2==password"  padding-left>
+          <p class="Warning" color="danger" *ngIf="password2!=null">Password salah</p>
+        </div>
       </ion-list>
   
       <ion-row>
         <ion-col>
-          <button class="ButtonMasuk" ion-button color="AyoDermawan" (click)="masuk(loginForm)" block><p class="ButtonWord">Masuk</p></button>
+          <button class="ButtonMasuk" ion-button color="AyoDermawan" (click)="masuk(registerForm)" block><p class="ButtonWord">Buat</p></button>
         </ion-col>
       </ion-row>
   
@@ -66,11 +77,11 @@
         <ion-row>
           <ion-col text-center>
             <p class="Head">
-              <font color="black">Tidak punya akun?</font>
-              <a class="Link" (click)="signUp()"> Buat akun.</a>
+              <font color="black">Sudah punya akun?</font>
+              <a class="Link" (click)="signIn()"> Masuk.</a>
             </p>
           </ion-col>
         </ion-row>
       </ion-grid>
-  </form> -->
+  </form>
 </ion-content>
