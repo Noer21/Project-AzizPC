@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
+import { HomePage } from '../home/home';
 
 /**
  * Generated class for the LoginPage page.
@@ -17,7 +18,7 @@ import { RegisterPage } from '../register/register';
 export class LoginPage {
 
   submitted = false;
-  status:string;
+  status = "password";
   lihat = true;
   
   email: string;
@@ -46,4 +47,9 @@ export class LoginPage {
   signUp() {
     this.navCtrl.push(RegisterPage);
   }
+
+  signIn(){
+    this.navCtrl.setRoot(HomePage);
+  }
+
 }
