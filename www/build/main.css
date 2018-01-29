@@ -25682,6 +25682,22 @@ page-detail .judul {
   text-align: center;
 }
 
+page-detail pre {
+  font-family: roboto;
+}
+
+page-detail .iconable {
+  color: black;
+}
+
+page-detail .icondisable {
+  color: gray;
+}
+
+page-detail ion-icon {
+  font-size: 40px;
+}
+
 page-home .Status {
   font-size: 46 px !important;
   text-align: left;

@@ -13,41 +13,85 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-card>
-    <ion-card-content >
-      <div class = "col  col-50">
-        <ion-card-title class="judul">
-          Deskripsi
-        </ion-card-title>
+<ion-content>
+  <img src="assets/imgs/rusak.jpeg"/><br/>
+  <div padding>
+    <h2 class="judul"> Deskripsi </h2>
+      <div class="row">
+        <div col-4>Nama Barang</div>
+        <div col-1>:</div>
+        <div col-7>Lenovo Yoga</div>
       </div>
-      <img src="assets/imgs/rusak.jpeg"/>
-      <p> Nama Barang   : Lenovo Yoga </p>
-      <p> Nomor Telepon : 0888888888 </p>
-      <p> Tanggal Masuk : 25 Desember 2017 </p>
-      <p> Tanggal Jadi  : 5 Januari 2018 </p>
-      <p> Kelengkapan   :</p>
-      <ol>
-        <li>Cherger</li>
-        <li>Mouse</li>
-        <li>Tas</li>
-      </ol>
-      <p> Jenis Service : -</p>
-      <p> Total Biaya   : -</p>
-      <br>
-    </ion-card-content>
-  </ion-card>
-  <ion-card>
-    <ion-card-content >
-      <ion-card-title class="judul">
-        Progres
-      </ion-card-title>
-        <p> Penjemputan </p>
-        <p> Diagnosa </p>
-        <p> COnformasi </p>
-        <p> Reparasi </p>
-        <p> Selesai </p>
-      <br>
-    </ion-card-content>
-  </ion-card>
+      <div class="row">
+        <div col-4>Nomor Telepon</div>
+        <div col-1>:</div>
+        <div col-7>09888888888</div>
+      </div>
+      <div class="row">
+        <div col-4>Tanggal Masuk</div>
+        <div col-1>:</div>
+        <div col-7>25 Desember 2017</div>
+      </div>
+      <div class="row">
+        <div col-4>Tanggal Selesai</div>
+        <div col-1>:</div>
+        <div col-7>-</div>
+      </div>
+      <div class="row">
+        <div col-4>Kelengkapan</div>
+        <div col-1>:</div>
+        <div col-7> Charger, Mouse, Tas</div>
+      </div>
+      <div class="row">
+        <div col-4>Jenis Service</div>
+        <div col-1>:</div>
+        <div col-7>-</div>
+      </div>
+      <div class="row">
+        <div col-4>Total Biaya</div>
+        <div col-1>:</div>
+        <div col-7>-</div>
+      </div>
+    </div>
+    <h2 class="judul"> Progres </h2>
+    <ion-list>
+      <ion-item class="iconable">
+        <ion-avatar item-start>
+          <ion-icon name="checkmark" item-end></ion-icon>
+        </ion-avatar>
+        <h2>Penjemputan</h2>
+        <h3>Tanggal - </h3>
+      </ion-item>
+      <ion-item class="icondisable">
+        <ion-avatar item-start>
+          <ion-icon name="close" item-end></ion-icon>
+        </ion-avatar>
+        <h2>Diagnosa</h2>
+        <h3>Tanggal : -</h3>
+      </ion-item>
+      <ion-item class="icondisable">
+        <ion-avatar item-start>
+          <ion-icon name="close" item-end></ion-icon>
+        </ion-avatar>
+        <h2>Konfirmasi</h2>
+        <h3>Tanggal : -</h3>
+        <h3>Harga   : -</h3>
+        <button ion-button color="secondary" [disabled]="disableButton">Terima</button>
+        <button ion-button color="danger" [disabled]="disableButton">Batal</button>
+      </ion-item>
+      <ion-item class="icondisable">
+        <ion-avatar item-start>
+          <ion-icon name="close" item-end></ion-icon>
+        </ion-avatar>
+        <h2>Reparasi</h2>
+        <h3>Tanggal : -</h3>
+      </ion-item>
+      <ion-item class="icondisable">
+        <ion-avatar item-start>
+          <ion-icon name="close" item-end></ion-icon>
+        </ion-avatar>
+        <h2>Selesai</h2>
+        <h3>Tanggal : -</h3>
+      </ion-item>
+    </ion-list>
 </ion-content>
