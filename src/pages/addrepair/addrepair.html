@@ -1,0 +1,72 @@
+<!--
+  Generated template for the AddrepairPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tambah Service</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <h5 class="head"> Nama Barang</h5>
+    <ion-item>
+      <ion-input type="text" placeholder="Ex. Laptop Asus ROG Gx600"></ion-input>
+    </ion-item>
+
+    <h5 class="head"> Nama Barang</h5>
+    <ion-item>
+      <ion-textarea placeholder="Keluhan Ananda"></ion-textarea>
+    </ion-item>
+
+    <h5 class="head"> Kelengkapan Barang</h5>
+    <ion-list>
+      <ion-item>
+        <ion-label>Charger</ion-label>
+        <ion-checkbox [(ngModel)]="charger"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+         <ion-label>Maouse</ion-label>
+        <ion-checkbox [(ngModel)]="Mouse"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Tas</ion-label>
+        <ion-checkbox [(ngModel)]="mushrooms"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>CD/Driver</ion-label>
+        <ion-checkbox [(ngModel)]="CD/Driver"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <h5 class="head">Jenis Service </h5>
+    <ion-item>
+        <ion-label>Jenis Service</ion-label>
+        <ion-select [(ngModel)]="gaming" multiple="true">
+          <ion-option value="1">Install Ulang OS</ion-option>
+          <ion-option value="2">HDD Bad Sector</ion-option>
+          <ion-option value="3">Recovery Data</ion-option>
+          <ion-option value="4">Ganti HDD/LED/LCD</ion-option>
+          <ion-option value="5">Upgrade Memory</ion-option>
+          <ion-option value="6">Mati Total</ion-option>
+          <ion-option value="7">Blue Screen</ion-option>
+          <ion-option value="8">Membersihkan Laptop/NB/PC</ion-option>
+          <ion-option value="9">Ganti Fan</ion-option>
+          <ion-option value="10">Ganti Mainboard/Keybiard/Casing</ion-option>
+          <ion-option value="11">Service Panggilan</ion-option>
+        </ion-select>
+      </ion-item>
+
+      <h5 class="head">Alamat Penjemputan</h5>
+      <ion-item>
+        <ion-input type="text" placeholder="Ex. IPB dramaga"></ion-input>
+      </ion-item>
+
+  </ion-list>
+</ion-content>

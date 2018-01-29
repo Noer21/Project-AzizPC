@@ -16,7 +16,7 @@ import { DetailPage } from '../pages/detail/detail';
 import { ProfilePage } from '../pages/profile/profile';
 import { HistoryPage } from '../pages/history/history';
 import { ServicePage } from '../pages/service/service';
-
+import { AddrepairPage } from '../pages/addrepair/addrepair';
 
 @NgModule({
   declarations: [
@@ -31,6 +31,7 @@ import { ServicePage } from '../pages/service/service';
     ProfilePage,
     HistoryPage,
     ServicePage,
+    AddrepairPage,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +50,7 @@ import { ServicePage } from '../pages/service/service';
     ProfilePage,
     HistoryPage,
     ServicePage,
+    AddrepairPage
   ],
   providers: [
     StatusBar,
