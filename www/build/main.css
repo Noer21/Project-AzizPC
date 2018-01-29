@@ -25769,6 +25769,80 @@ page-login ion-title {
   text-align: center;
 }
 
+page-profile .Pict {
+  height: 30vw;
+  width: 30vw;
+  border-radius: 100%;
+  margin-top: 7vw;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+page-profile .Nama {
+  text-align: center;
+  color: #202020;
+  font-size: 6vw;
+  font-weight: 5px;
+}
+
+page-profile .Head {
+  margin-left: 4vw;
+  font-size: 5vw;
+  font-weight: 6px;
+  color: #202020;
+}
+
+page-profile .HeadSpesial {
+  margin-left: 5vw;
+  text-align: center;
+  margin-top: 2vw;
+  font-size: 5vw;
+  font-weight: 6px;
+}
+
+page-profile .Konten {
+  margin-left: 4vw;
+  font-size: 5vw;
+  color: gray;
+}
+
+page-profile .Icon {
+  padding-left: 5vw;
+  font-size: 10vw;
+  color: #1e99d0;
+}
+
+page-profile .IconSpesial {
+  padding-left: 5vw;
+  font-size: 10vw;
+  color: rgba(1, 1, 1, 0);
+}
+
+page-profile .IconMail {
+  padding-left: 5vw;
+  font-size: 10vw;
+  color: #1e99d0;
+}
+
+page-profile .Button {
+  height: 10vw !important;
+  width: 100%;
+  margin-top: 3vw;
+}
+
+page-profile .ButtonWordWhite {
+  font-size: 5vw;
+  font-weight: 2px;
+  color: white;
+}
+
+page-profile .ButtonWordBlack {
+  font-size: 5vw;
+  font-weight: 2px;
+  color: #f53d3d;
+}
+
 page-register ion-title {
   text-align: center;
 }

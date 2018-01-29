@@ -13,7 +13,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { DetailPage } from '../pages/detail/detail';
-
+import { ProfilePage } from '../pages/profile/profile';
+import { HistoryPage } from '../pages/history/history';
+import { ServicePage } from '../pages/service/service';
 
 
 @NgModule({
@@ -25,7 +27,10 @@ import { DetailPage } from '../pages/detail/detail';
     TabsPage,
     LoginPage,
     RegisterPage,
-    DetailPage
+    DetailPage,
+    ProfilePage,
+    HistoryPage,
+    ServicePage,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,10 @@ import { DetailPage } from '../pages/detail/detail';
     TabsPage,
     LoginPage,
     RegisterPage,
-    DetailPage
+    DetailPage,
+    ProfilePage,
+    HistoryPage,
+    ServicePage,
   ],
   providers: [
     StatusBar,

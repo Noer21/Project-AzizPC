@@ -8,24 +8,11 @@
     </ion-header>
     <ion-content>
         <ion-list>
-            <button ion-item>
-                <ion-icon name="build" item-start></ion-icon>
-                    Layanan Kami
-            </button>
-            <button ion-item>
-                <ion-icon name="construct" item-start></ion-icon>
-                    Barangmu
-            </button>
-            <button ion-item>
-                    <ion-icon name="timer" item-start></ion-icon>
-                    Riwayat
-            </button>
-            <button ion-item>
-                    <ion-icon name="contact" item-start></ion-icon>
-                        Profil
-            </button>                  
-      </ion-list>
-    </ion-content>
+          <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+            {{p.title}}
+          </button>
+        </ion-list>
+      </ion-content>
 </ion-menu>
 
-<ion-nav [root]="rootPage" #content></ion-nav>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
