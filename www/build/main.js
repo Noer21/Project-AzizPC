@@ -80,7 +80,7 @@ var DetailPage = (function () {
     };
     DetailPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-detail',template:/*ion-inline-start:"D:\Project\List\Project-AzizPC\src\pages\detail\detail.html"*/'<!--\n  Generated template for the DetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>detail</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <img src="assets/imgs/rusak.jpeg"/><br/>\n  <div padding>\n    <h2 class="judul"> Deskripsi </h2>\n      <div class="row">\n        <div col-4>Nama Barang</div>\n        <div col-1>:</div>\n        <div col-7>Lenovo Yoga</div>\n      </div>\n      <div class="row">\n        <div col-4>Nomor Telepon</div>\n        <div col-1>:</div>\n        <div col-7>09888888888</div>\n      </div>\n      <div class="row">\n        <div col-4>Tanggal Masuk</div>\n        <div col-1>:</div>\n        <div col-7>25 Desember 2017</div>\n      </div>\n      <div class="row">\n        <div col-4>Tanggal Selesai</div>\n        <div col-1>:</div>\n        <div col-7>-</div>\n      </div>\n      <div class="row">\n        <div col-4>Kelengkapan</div>\n        <div col-1>:</div>\n        <div col-7> Charger, Mouse, Tas</div>\n      </div>\n      <div class="row">\n        <div col-4>Jenis Service</div>\n        <div col-1>:</div>\n        <div col-7>-</div>\n      </div>\n      <div class="row">\n        <div col-4>Total Biaya</div>\n        <div col-1>:</div>\n        <div col-7>-</div>\n      </div>\n    </div>\n    <h2 class="judul"> Progres </h2>\n    <ion-list>\n      <ion-item class="iconable">\n        <ion-avatar item-start>\n          <ion-icon name="checkmark" item-end></ion-icon>\n        </ion-avatar>\n        <h2>Penjemputan</h2>\n        <h3>Tanggal - </h3>\n      </ion-item>\n      <ion-item class="icondisable">\n        <ion-avatar item-start>\n          <ion-icon name="close" item-end></ion-icon>\n        </ion-avatar>\n        <h2>Diagnosa</h2>\n        <h3>Tanggal : -</h3>\n      </ion-item>\n      <ion-item class="icondisable">\n        <ion-avatar item-start>\n          <ion-icon name="close" item-end></ion-icon>\n        </ion-avatar>\n        <h2>Konfirmasi</h2>\n        <h3>Tanggal : -</h3>\n        <h3>Harga   : -</h3>\n        <button ion-button color="secondary" [disabled]="disableButton">Terima</button>\n        <button ion-button color="danger" [disabled]="disableButton">Batal</button>\n      </ion-item>\n      <ion-item class="icondisable">\n        <ion-avatar item-start>\n          <ion-icon name="close" item-end></ion-icon>\n        </ion-avatar>\n        <h2>Reparasi</h2>\n        <h3>Tanggal : -</h3>\n      </ion-item>\n      <ion-item class="icondisable">\n        <ion-avatar item-start>\n          <ion-icon name="close" item-end></ion-icon>\n        </ion-avatar>\n        <h2>Selesai</h2>\n        <h3>Tanggal : -</h3>\n      </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"D:\Project\List\Project-AzizPC\src\pages\detail\detail.html"*/,
+            selector: 'page-detail',template:/*ion-inline-start:"D:\Project\List\Project-AzizPC\src\pages\detail\detail.html"*/'<!--\n  Generated template for the DetailPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>detail</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <img src="assets/imgs/rusak.jpeg"/><br/>\n  <div padding>\n    <h2 class="judul"> Nama Barang </h2>\n      <div class="row">\n        <div col-4>Nama Barang</div>\n        <div col-1>:</div>\n        <div col-7>Lenovo Yoga</div>\n      </div>\n      <div class="row">\n        <div col-4>Nomor Telepon</div>\n        <div col-1>:</div>\n        <div col-7>09888888888</div>\n      </div>\n      <div class="row">\n        <div col-4>Tanggal Masuk</div>\n        <div col-1>:</div>\n        <div col-7>25 Desember 2017</div>\n      </div>\n      <div class="row">\n        <div col-4>Tanggal Selesai</div>\n        <div col-1>:</div>\n        <div col-7>-</div>\n      </div>\n      <div class="row">\n        <div col-4>Kelengkapan</div>\n        <div col-1>:</div>\n        <div col-7> Charger, Mouse, Tas</div>\n      </div>\n      <div class="row">\n        <div col-4>Jenis Service</div>\n        <div col-1>:</div>\n        <div col-7>-</div>\n      </div>\n      <div class="row">\n        <div col-4>Total Biaya</div>\n        <div col-1>:</div>\n        <div col-7>-</div>\n      </div>\n    </div>\n    \n    <h2 class="judul"> Progres </h2>\n    <ion-list>\n      <ion-item class="iconable">\n        <ion-avatar item-start>\n          <ion-icon name="checkmark" item-end></ion-icon>\n        </ion-avatar>\n        <h2>Penjemputan</h2>\n        <h3>Tanggal - </h3>\n      </ion-item>\n      <ion-item class="icondisable">\n        <ion-avatar item-start>\n          <ion-icon name="close" item-end></ion-icon>\n        </ion-avatar>\n        <h2>Diagnosa</h2>\n        <h3>Tanggal : -</h3>\n      </ion-item>\n      <ion-item class="icondisable">\n        <ion-avatar item-start>\n          <ion-icon name="close" item-end></ion-icon>\n        </ion-avatar>\n        <h2>Konfirmasi</h2>\n        <h3>Tanggal : -</h3>\n        <h3>Harga   : -</h3>\n        <button ion-button color="secondary" [disabled]="disableButton">Terima</button>\n        <button ion-button color="danger" [disabled]="disableButton">Batal</button>\n      </ion-item>\n      <ion-item class="icondisable">\n        <ion-avatar item-start>\n          <ion-icon name="close" item-end></ion-icon>\n        </ion-avatar>\n        <h2>Reparasi</h2>\n        <h3>Tanggal : -</h3>\n      </ion-item>\n      <ion-item class="icondisable">\n        <ion-avatar item-start>\n          <ion-icon name="close" item-end></ion-icon>\n        </ion-avatar>\n        <h2>Selesai</h2>\n        <h3>Tanggal : -</h3>\n      </ion-item>\n    </ion-list>\n</ion-content>\n'/*ion-inline-end:"D:\Project\List\Project-AzizPC\src\pages\detail\detail.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], DetailPage);
@@ -140,74 +140,6 @@ var HistoryPage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_register__ = __webpack_require__(51);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(40);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-/**
- * Generated class for the LoginPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var LoginPage = (function () {
-    function LoginPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.submitted = false;
-        this.status = "password";
-        this.lihat = true;
-    }
-    LoginPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad LoginPage');
-    };
-    LoginPage.prototype.showPassword = function () {
-        this.status = "text";
-        this.lihat = false;
-        console.log(this.status);
-    };
-    LoginPage.prototype.hidePassword = function () {
-        this.status = "password";
-        this.lihat = true;
-        console.log(this.status);
-    };
-    LoginPage.prototype.signUp = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__register_register__["a" /* RegisterPage */]);
-    };
-    LoginPage.prototype.signIn = function () {
-        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
-    };
-    LoginPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-login',template:/*ion-inline-start:"D:\Project\List\Project-AzizPC\src\pages\login\login.html"*/'<ion-header>\n\n  \n\n  \n\n</ion-header>\n\n  \n\n  \n\n  <ion-content padding>\n\n    <img src="assets/imgs/LogoAzizPC.jpg" class=\'Logo\'>\n\n    <form #loginForm="ngForm" novalidate>\n\n      <ion-list >\n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Email</p></ion-label>\n\n          <ion-input class="Head2" [(ngModel)]="email" name="email" type="email" #user="ngModel" spellcheck="false" autocapitalize="off"\n\n            required>\n\n          </ion-input>\n\n        </ion-item>\n\n        <p ion-text [hidden]="user.valid || submitted == false" color="danger" padding-left class="Warning">\n\n        Email harus diisi\n\n        </p>\n\n  \n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Password</p></ion-label>\n\n          <ion-input class="Head2"  [(ngModel)]="password" name="pass" type="{{status}}" #pass="ngModel"  required>\n\n          </ion-input>\n\n          <button class="tombol" [hidden]="lihat == false" (click)="showPassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n          <button class="tombol" [hidden]="lihat == true" (click)="hidePassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n        </ion-item>\n\n        <p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left class="Warning">\n\n          Password harus diisi\n\n        </p>\n\n      </ion-list>\n\n  \n\n      <!--ini buat mock up-->\n\n      <ion-row>\n\n        <ion-col>\n\n          <button class="ButtonMasuk" ion-button color="AyoDermawan" (click)="signIn()" block><p class="ButtonWord">Masuk</p></button>\n\n        </ion-col>\n\n      </ion-row>\n\n  \n\n      <ion-grid>\n\n        <ion-row>\n\n          <ion-col text-center>\n\n            <p class="Head">\n\n              <font color="black">Tidak punya akun?</font>\n\n              <a class="Link" (click)="signUp()"> Buat akun.</a>\n\n            </p>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid>\n\n  \n\n    </form>\n\n  \n\n  </ion-content>'/*ion-inline-end:"D:\Project\List\Project-AzizPC\src\pages\login\login.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], LoginPage);
-    return LoginPage;
-}());
-
-//# sourceMappingURL=login.js.map
-
-/***/ }),
-
-/***/ 105:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
@@ -249,7 +181,7 @@ var ProfilePage = (function () {
 
 /***/ }),
 
-/***/ 106:
+/***/ 105:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -294,6 +226,86 @@ var ServicePage = (function () {
 
 /***/ }),
 
+/***/ 106:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(40);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+/**
+ * Generated class for the RegisterPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var RegisterPage = (function () {
+    function RegisterPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.submitted = false;
+        this.status = "password";
+        this.lihat = true;
+        this.status2 = "password";
+        this.lihat2 = true;
+    }
+    RegisterPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad RegisterPage');
+    };
+    RegisterPage.prototype.showPassword = function () {
+        this.status = "text";
+        this.lihat = false;
+        console.log(this.status);
+    };
+    RegisterPage.prototype.hidePassword = function () {
+        this.status = "password";
+        this.lihat = true;
+        console.log(this.status);
+    };
+    RegisterPage.prototype.showPassword2 = function () {
+        this.status2 = "text";
+        this.lihat2 = false;
+        console.log(this.status);
+    };
+    RegisterPage.prototype.hidePassword2 = function () {
+        this.status2 = "password";
+        this.lihat2 = true;
+        console.log(this.status);
+    };
+    RegisterPage.prototype.signIn = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
+    };
+    RegisterPage.prototype.signUp = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
+    };
+    RegisterPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-register',template:/*ion-inline-start:"D:\Project\List\Project-AzizPC\src\pages\register\register.html"*/'<!--\n\n  Generated template for the RegisterPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <h2 class="title">Create New Account</h2>\n\n\n\n  <form #registerForm="ngForm" novalidate>\n\n      <ion-list >\n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Nama</p></ion-label>\n\n          <ion-input class="Head2" [(ngModel)]="name" name="name" type="text" #nama="ngModel" spellcheck="false" autocapitalize="off"\n\n            required>\n\n          </ion-input>\n\n        </ion-item>\n\n        <p ion-text [hidden]="nama.valid || submitted == false" color="danger" padding-left class="Warning">\n\n        Nama harus diisi\n\n        </p>\n\n\n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Email</p></ion-label>\n\n          <ion-input class="Head2" [(ngModel)]="email" name="email" pattern="[^@\]+@[^@\]+\.[^@\s]+" type="email" #mail="ngModel" spellcheck="false" autocapitalize="off"\n\n            required>\n\n          </ion-input>\n\n        </ion-item>\n\n        <p ion-text [hidden]="mail.valid || submitted == false" color="danger" padding-left class="Warning">\n\n        Email harus diisi\n\n        </p>\n\n\n\n        <ion-item>\n\n            <ion-label floating><p class="Head">Nomor Handphone</p></ion-label>\n\n            <ion-input class="Head2" [(ngModel)]="number" name="number" type="number" #nomor="ngModel" spellcheck="false" autocapitalize="off"\n\n              required>\n\n            </ion-input>\n\n          </ion-item>\n\n          <p ion-text [hidden]="nomor.valid || submitted == false" color="danger" padding-left class="Warning">\n\n          Nomor Handphone harus diisi\n\n          </p>\n\n  \n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Password</p></ion-label>\n\n          <ion-input class="Head2"  [(ngModel)]="password" name="password" type="{{status}}" #pass="ngModel"  required>\n\n          </ion-input>\n\n          <button class="tombol" [hidden]="lihat == false" (click)="showPassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n          <button class="tombol" [hidden]="lihat == true" (click)="hidePassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n        </ion-item>\n\n        <p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left class="Warning">\n\n          Password harus diisi\n\n        </p>\n\n\n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Konfirmasi Password</p></ion-label>\n\n          <ion-input class="Head2"  [(ngModel)]="password2" name="password2" type="{{status2}}" #pass2="ngModel"  required>\n\n          </ion-input>\n\n          <button class="tombol" [hidden]="lihat2 == false" (click)="showPassword2()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n          <button class="tombol" [hidden]="lihat2 == true" (click)="hidePassword2()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n        </ion-item>\n\n        <div ion-text [hidden]="password2==password"  padding-left>\n\n          <p class="Warning" color="danger" *ngIf="password2!=null">Password salah</p>\n\n        </div>\n\n      </ion-list>\n\n  \n\n      <ion-row>\n\n        <ion-col>\n\n          <button class="ButtonMasuk" ion-button color="AyoDermawan" (click)="signUp()" block><p class="ButtonWord">Buat</p></button>\n\n        </ion-col>\n\n      </ion-row>\n\n  \n\n      <ion-grid>\n\n        <ion-row>\n\n          <ion-col text-center>\n\n            <p class="Head">\n\n              <font color="black">Sudah punya akun?</font>\n\n              <a class="Link" (click)="signIn()"> Masuk.</a>\n\n            </p>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid>\n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\List\Project-AzizPC\src\pages\register\register.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], RegisterPage);
+    return RegisterPage;
+}());
+
+//# sourceMappingURL=register.js.map
+
+/***/ }),
+
 /***/ 117:
 /***/ (function(module, exports) {
 
@@ -328,19 +340,19 @@ var map = {
 		4
 	],
 	"../pages/login/login.module": [
-		284,
+		286,
 		3
 	],
 	"../pages/profile/profile.module": [
-		285,
+		284,
 		2
 	],
 	"../pages/register/register.module": [
-		286,
+		287,
 		1
 	],
 	"../pages/service/service.module": [
-		287,
+		285,
 		0
 	]
 };
@@ -459,12 +471,12 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_tabs_tabs__ = __webpack_require__(280);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_status_bar__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_splash_screen__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_login_login__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_register_register__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_login_login__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_register_register__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_detail_detail__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_profile_profile__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_profile_profile__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_history_history__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_service_service__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_service_service__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_addrepair_addrepair__ = __webpack_require__(101);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -515,10 +527,10 @@ var AppModule = (function () {
                         { loadChildren: '../pages/addrepair/addrepair.module#AddrepairPageModule', name: 'AddrepairPage', segment: 'addrepair', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/detail/detail.module#DetailPageModule', name: 'DetailPage', segment: 'detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/history/history.module#HistoryPageModule', name: 'HistoryPage', segment: 'history', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/service/service.module#ServicePageModule', name: 'ServicePage', segment: 'service', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/service/service.module#ServicePageModule', name: 'ServicePage', segment: 'service', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -560,11 +572,11 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(198);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_register_register__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_profile_profile__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_profile_profile__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_history_history__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_service_service__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_service_service__ = __webpack_require__(105);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -588,7 +600,7 @@ var MyApp = (function () {
         this.platform = platform;
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
-        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_register_register__["a" /* RegisterPage */];
+        this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_login_login__["a" /* LoginPage */];
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [
@@ -717,10 +729,10 @@ var HomePage = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(12);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_register__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(40);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -736,60 +748,48 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 /**
- * Generated class for the RegisterPage page.
+ * Generated class for the LoginPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-var RegisterPage = (function () {
-    function RegisterPage(navCtrl, navParams) {
+var LoginPage = (function () {
+    function LoginPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.submitted = false;
         this.status = "password";
         this.lihat = true;
-        this.status2 = "password";
-        this.lihat2 = true;
     }
-    RegisterPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad RegisterPage');
+    LoginPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad LoginPage');
     };
-    RegisterPage.prototype.showPassword = function () {
+    LoginPage.prototype.showPassword = function () {
         this.status = "text";
         this.lihat = false;
         console.log(this.status);
     };
-    RegisterPage.prototype.hidePassword = function () {
+    LoginPage.prototype.hidePassword = function () {
         this.status = "password";
         this.lihat = true;
         console.log(this.status);
     };
-    RegisterPage.prototype.showPassword2 = function () {
-        this.status2 = "text";
-        this.lihat2 = false;
-        console.log(this.status);
+    LoginPage.prototype.signUp = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__register_register__["a" /* RegisterPage */]);
     };
-    RegisterPage.prototype.hidePassword2 = function () {
-        this.status2 = "password";
-        this.lihat2 = true;
-        console.log(this.status);
-    };
-    RegisterPage.prototype.signIn = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__login_login__["a" /* LoginPage */]);
-    };
-    RegisterPage.prototype.signUp = function () {
+    LoginPage.prototype.signIn = function () {
         this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
     };
-    RegisterPage = __decorate([
+    LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-register',template:/*ion-inline-start:"D:\Project\List\Project-AzizPC\src\pages\register\register.html"*/'<!--\n\n  Generated template for the RegisterPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <h2 class="title">Create New Account</h2>\n\n\n\n  <form #registerForm="ngForm" novalidate>\n\n      <ion-list >\n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Nama</p></ion-label>\n\n          <ion-input class="Head2" [(ngModel)]="name" name="name" type="text" #nama="ngModel" spellcheck="false" autocapitalize="off"\n\n            required>\n\n          </ion-input>\n\n        </ion-item>\n\n        <p ion-text [hidden]="nama.valid || submitted == false" color="danger" padding-left class="Warning">\n\n        Nama harus diisi\n\n        </p>\n\n\n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Email</p></ion-label>\n\n          <ion-input class="Head2" [(ngModel)]="email" name="email" pattern="[^@\]+@[^@\]+\.[^@\s]+" type="email" #mail="ngModel" spellcheck="false" autocapitalize="off"\n\n            required>\n\n          </ion-input>\n\n        </ion-item>\n\n        <p ion-text [hidden]="mail.valid || submitted == false" color="danger" padding-left class="Warning">\n\n        Email harus diisi\n\n        </p>\n\n\n\n        <ion-item>\n\n            <ion-label floating><p class="Head">Nomor Handphone</p></ion-label>\n\n            <ion-input class="Head2" [(ngModel)]="number" name="number" type="number" #nomor="ngModel" spellcheck="false" autocapitalize="off"\n\n              required>\n\n            </ion-input>\n\n          </ion-item>\n\n          <p ion-text [hidden]="nomor.valid || submitted == false" color="danger" padding-left class="Warning">\n\n          Nomor Handphone harus diisi\n\n          </p>\n\n  \n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Password</p></ion-label>\n\n          <ion-input class="Head2"  [(ngModel)]="password" name="password" type="{{status}}" #pass="ngModel"  required>\n\n          </ion-input>\n\n          <button class="tombol" [hidden]="lihat == false" (click)="showPassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n          <button class="tombol" [hidden]="lihat == true" (click)="hidePassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n        </ion-item>\n\n        <p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left class="Warning">\n\n          Password harus diisi\n\n        </p>\n\n\n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Konfirmasi Password</p></ion-label>\n\n          <ion-input class="Head2"  [(ngModel)]="password2" name="password2" type="{{status2}}" #pass2="ngModel"  required>\n\n          </ion-input>\n\n          <button class="tombol" [hidden]="lihat2 == false" (click)="showPassword2()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n          <button class="tombol" [hidden]="lihat2 == true" (click)="hidePassword2()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n        </ion-item>\n\n        <div ion-text [hidden]="password2==password"  padding-left>\n\n          <p class="Warning" color="danger" *ngIf="password2!=null">Password salah</p>\n\n        </div>\n\n      </ion-list>\n\n  \n\n      <ion-row>\n\n        <ion-col>\n\n          <button class="ButtonMasuk" ion-button color="AyoDermawan" (click)="signUp()" block><p class="ButtonWord">Buat</p></button>\n\n        </ion-col>\n\n      </ion-row>\n\n  \n\n      <ion-grid>\n\n        <ion-row>\n\n          <ion-col text-center>\n\n            <p class="Head">\n\n              <font color="black">Sudah punya akun?</font>\n\n              <a class="Link" (click)="signIn()"> Masuk.</a>\n\n            </p>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid>\n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Project\List\Project-AzizPC\src\pages\register\register.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"D:\Project\List\Project-AzizPC\src\pages\login\login.html"*/'<ion-header>\n\n  \n\n  \n\n</ion-header>\n\n  \n\n  \n\n  <ion-content padding>\n\n    <img src="assets/imgs/LogoAzizPC.jpg" class=\'Logo\'>\n\n    <form #loginForm="ngForm" novalidate>\n\n      <ion-list >\n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Email</p></ion-label>\n\n          <ion-input class="Head2" [(ngModel)]="email" name="email" type="email" #user="ngModel" spellcheck="false" autocapitalize="off"\n\n            required>\n\n          </ion-input>\n\n        </ion-item>\n\n        <p ion-text [hidden]="user.valid || submitted == false" color="danger" padding-left class="Warning">\n\n        Email harus diisi\n\n        </p>\n\n  \n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Password</p></ion-label>\n\n          <ion-input class="Head2"  [(ngModel)]="password" name="pass" type="{{status}}" #pass="ngModel"  required>\n\n          </ion-input>\n\n          <button class="tombol" [hidden]="lihat == false" (click)="showPassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n          <button class="tombol" [hidden]="lihat == true" (click)="hidePassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n        </ion-item>\n\n        <p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left class="Warning">\n\n          Password harus diisi\n\n        </p>\n\n      </ion-list>\n\n  \n\n      <!--ini buat mock up-->\n\n      <ion-row>\n\n        <ion-col>\n\n          <button class="ButtonMasuk" ion-button color="AyoDermawan" (click)="signIn()" block><p class="ButtonWord">Masuk</p></button>\n\n        </ion-col>\n\n      </ion-row>\n\n  \n\n      <ion-grid>\n\n        <ion-row>\n\n          <ion-col text-center>\n\n            <p class="Head">\n\n              <font color="black">Tidak punya akun?</font>\n\n              <a class="Link" (click)="signUp()"> Buat akun.</a>\n\n            </p>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid>\n\n  \n\n    </form>\n\n  \n\n  </ion-content>'/*ion-inline-end:"D:\Project\List\Project-AzizPC\src\pages\login\login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], RegisterPage);
-    return RegisterPage;
+    ], LoginPage);
+    return LoginPage;
 }());
 
-//# sourceMappingURL=register.js.map
+//# sourceMappingURL=login.js.map
 
 /***/ })
 

@@ -19,7 +19,7 @@ import { ServicePage } from '../pages/service/service';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   
-    rootPage: any = RegisterPage;
+    rootPage: any = LoginPage;
   
     pages: Array<{title: string, component: any}>;
   
