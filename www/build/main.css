@@ -25884,3 +25884,7 @@ page-register .icon {
   font-size: 7vw;
   float: right;
 }
+
+page-service ion-slides {
+  height: 30vh;
+}
