@@ -51,43 +51,87 @@
     
     <h2 class="judul"> Progres </h2>
     <ion-list>
-      <ion-item class="iconable">
+
+      <ion-item class="iconable" [hidden]="!jemput">
         <ion-avatar item-start>
           <ion-icon name="checkmark" item-end></ion-icon>
         </ion-avatar>
         <h2>Penjemputan</h2>
         <h3>Tanggal - </h3>
       </ion-item>
-      <ion-item class="icondisable">
+      <ion-item class="icondisable" [hidden]="jemput">
         <ion-avatar item-start>
           <ion-icon name="close" item-end></ion-icon>
+        </ion-avatar>
+        <h2>Penjemputan</h2>
+        <h3>Tanggal - </h3>
+      </ion-item>
+
+      <ion-item class="iconable" [hidden]="!diagnosa">
+        <ion-avatar item-start>
+          <ion-icon name="checkmark" item-end></ion-icon>
         </ion-avatar>
         <h2>Diagnosa</h2>
         <h3>Tanggal : -</h3>
       </ion-item>
-      <ion-item class="icondisable">
+      <ion-item class="icondisable" [hidden]="diagnosa">
+          <ion-avatar item-start>
+            <ion-icon name="close" item-end></ion-icon>
+          </ion-avatar>
+          <h2>Diagnosa</h2>
+          <h3>Tanggal : -</h3>
+        </ion-item>
+
+      <ion-item class="iconable" [hidden]="!konfirmasi">
+        <ion-avatar item-start>
+          <ion-icon name="checkmark" item-end></ion-icon>
+        </ion-avatar>
+        <h2>Konfirmasi</h2>
+        <h3>Tanggal : -</h3>
+        <h3>Harga   : -</h3>
+        <button ion-button color="secondary" [disabled]="!konfirmasi" (click)="Terima()">Terima</button>
+        <button ion-button color="danger" [disabled]="!konfirmasi" (click)="Batal()">Batal</button>
+      </ion-item>
+      <ion-item class="icondisable" [hidden]="konfirmasi">
         <ion-avatar item-start>
           <ion-icon name="close" item-end></ion-icon>
         </ion-avatar>
         <h2>Konfirmasi</h2>
         <h3>Tanggal : -</h3>
         <h3>Harga   : -</h3>
-        <button ion-button color="secondary" [disabled]="disableButton">Terima</button>
-        <button ion-button color="danger" [disabled]="disableButton">Batal</button>
+        <button ion-button color="secondary" [disabled]="konfirmasi">Terima</button>
+        <button ion-button color="danger" [disabled]="konfirmasi">Batal</button>
       </ion-item>
-      <ion-item class="icondisable">
+
+      <ion-item class="iconable" [hidden]="!reparasi">
+        <ion-avatar item-start>
+          <ion-icon name="checkmark" item-end></ion-icon>
+        </ion-avatar>
+        <h2>Reparasi</h2>
+        <h3>Tanggal : -</h3>
+      </ion-item>
+      <ion-item class="icondisable" [hidden]="reparasi">
         <ion-avatar item-start>
           <ion-icon name="close" item-end></ion-icon>
         </ion-avatar>
         <h2>Reparasi</h2>
         <h3>Tanggal : -</h3>
       </ion-item>
-      <ion-item class="icondisable">
+
+      <ion-item class="iconable" [hidden]="!selesai">
+        <ion-avatar item-start>
+          <ion-icon name="checkmark" item-end></ion-icon>
+        </ion-avatar>
+        <h2>Selesai</h2>
+        <h3>Tanggal : -</h3>
+      </ion-item>
+      <ion-item class="icondisable" [hidden]="selesai">
         <ion-avatar item-start>
           <ion-icon name="close" item-end></ion-icon>
         </ion-avatar>
         <h2>Selesai</h2>
         <h3>Tanggal : -</h3>
       </ion-item>
+
     </ion-list>
 </ion-content>
