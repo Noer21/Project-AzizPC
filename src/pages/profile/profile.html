@@ -7,7 +7,10 @@
   </ion-navbar>
 </ion-header>  
 <ion-content>
-  <img src="assets/imgs/logo.png" *ngIf="!image" class="Pict" />
+  <div class="photoprofile">
+    <ion-icon name="camera" class="editIcon"></ion-icon>
+    <img src="assets/imgs/logo.png" *ngIf="!image" class="Pict"/>
+  </div>
     <img [src]="image" *ngIf="image"/>  
     <ion-item padding-right text-wrap>
       <p class="Nama">Namaku</p>
