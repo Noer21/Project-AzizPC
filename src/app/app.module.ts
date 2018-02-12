@@ -24,6 +24,7 @@ import { AddrepairPage } from '../pages/addrepair/addrepair';
 import { Http } from '@angular/http';
 import { HttpModule } from '@angular/http';
 import { IonicStorageModule } from '@ionic/storage';
+import { EditProfilePage } from '../pages/edit-profile/edit-profile';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { IonicStorageModule } from '@ionic/storage';
     HistoryPage,
     ServicePage,
     AddrepairPage,
+    EditProfilePage
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { IonicStorageModule } from '@ionic/storage';
     ProfilePage,
     HistoryPage,
     ServicePage,
-    AddrepairPage
+    AddrepairPage,
+    EditProfilePage
   ],
   providers: [
     StatusBar,

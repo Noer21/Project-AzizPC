@@ -1,3 +1,4 @@
+import { EditProfilePage } from './../edit-profile/edit-profile';
 import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, App, NavParams, AlertController } from 'ionic-angular';
@@ -71,6 +72,10 @@ export class ProfilePage {
       ] 
     }); 
     confirm.present(); 
+  }
+
+  editProfil(){
+    this.navCtrl.setRoot(EditProfilePage, this.datas)
   }
 
 
