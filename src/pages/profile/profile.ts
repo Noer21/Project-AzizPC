@@ -1,5 +1,8 @@
+import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, App, NavParams, AlertController } from 'ionic-angular';
+import { Data } from '../../provider/data';
+
 
 /**
  * Generated class for the ProfilePage page.
@@ -14,12 +17,61 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'profile.html',
 })
 export class ProfilePage {
+  datas : any;
+  nama : string;
+  email : string;
+  hp : string;
+  alamat : string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public data : Data,
+              public alertCtrl : AlertController,
+              public app : App  
+            ) {
+              this.data.getData().then((data) =>{
+                this.datas = data;
+                this.nama = this.datas.nama;
+                this.email = this.datas.email;
+                this.hp = this.datas.hp;
+                this.alamat = this.datas.alamat;
+          
+                console.log(this.datas.alamat)
+              })             
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
   }
+
+
+  logOut(){
+    let confirm = this.alertCtrl.create({ 
+      title: '', 
+      subTitle: 'Apakah kamu yakin ingin keluar?', 
+      buttons: [ 
+        { 
+          text: 'Tidak', 
+          handler: () => { 
+            console.log('Disagree clicked'); 
+          } 
+        }, 
+        { 
+          text: 'Ya', 
+          handler: () => { 
+            console.log('Agree clicked') 
+            // this.navCtrl.setRoot(MyApp); 
+            this.data.logout(); 
+            this.app.getRootNav().setRoot(LoginPage); 
+            // , 
+            // this.data.logout(); 
+            // this.app.getRootNav().setRoot(MyApp); 
+          } 
+        } 
+      ] 
+    }); 
+    confirm.present(); 
+  }
+
 
 }

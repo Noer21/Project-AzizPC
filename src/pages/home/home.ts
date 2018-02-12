@@ -4,11 +4,13 @@ import { NavController } from 'ionic-angular';
 import { DetailPage } from '../detail/detail';
 import { AddrepairPage } from '../addrepair/addrepair';
 
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  datas : any;
 
   constructor(public navCtrl: NavController) {
 
@@ -21,5 +23,6 @@ export class HomePage {
   add(){
     this.navCtrl.push(AddrepairPage);
   }
+
 
 }

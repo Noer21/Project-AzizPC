@@ -1,7 +1,11 @@
+import { Data } from '../../provider/data';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
+import { NgForm } from '@angular/forms';
+import { Http } from '@angular/http';
 import { LoginPage } from '../login/login';
 import { HomePage } from '../home/home';
+
 
 /**
  * Generated class for the RegisterPage page.
@@ -16,20 +20,26 @@ import { HomePage } from '../home/home';
   templateUrl: 'register.html',
 })
 export class RegisterPage {
-
+  user: {nama?: string, email?: string, password?: string, role?:string, hp?:string, alamat?: string} = {};  
   submitted = false;
   status = "password";
   lihat = true;
   status2 = "password";
   lihat2 = true;
 
-  nomor:number;
-  name:string;
-  email: string;
-  password: string;
-  password2:string;
+  // nomor:number;
+  // name:string;
+  // email: string;
+  // password: string;
+  // password2:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public loadCtrl: LoadingController,
+              public http: Http,
+              public toastCtrl: ToastController,
+              public data : Data              
+            ) {
   }
 
   ionViewDidLoad() {
@@ -64,8 +74,52 @@ export class RegisterPage {
     this.navCtrl.push(LoginPage);
   }
 
-  signUp(){
-    this.navCtrl.setRoot(HomePage);
+  signUp(form: NgForm){
+    this.submitted = true;
+    let loading = this.loadCtrl.create({
+        content: 'Tunggu sebentar...'
+    });
+
+    if(form.valid){
+      loading.present();
+      let input = JSON.stringify({
+        nama : this.user.nama,
+        email : this.user.email,
+        password : this.user.password,
+        role : this.user.role = "2",
+        hp : this.user.hp,
+        alamat : this.user.alamat
+      });
+      this.http.post("http://127.0.0.1/AzisPc/BackEnd/signUpInfo.php",input).subscribe(data => {
+        loading.dismiss();
+        let response = data.json();
+        console.log(response);
+        if(response.status == 200){
+          let user=response.data;
+          console.log(user);
+          this.data.login(user);
+          this.navCtrl.setRoot(HomePage);
+          
+        }
+        this.showAlert(response.message);
+          }, err => {
+          loading.dismiss();
+          this.showError(err);
+          });
+
+    }
   }
 
+  showError(err: any){
+    err.status==0?
+    this.showAlert("Tidak ada koneksi. Cek kembali sambungan Internet perangkat Anda"):
+    this.showAlert("Tidak dapat menyambungkan ke server. Mohon muat kembali halaman ini");
+  }
+  showAlert(message){
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 3000
+    });
+    toast.present();
+  }
 }

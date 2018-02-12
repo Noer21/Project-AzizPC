@@ -12,6 +12,8 @@ import { ProfilePage } from '../pages/profile/profile';
 import { HistoryPage } from '../pages/history/history';
 import { ServicePage } from '../pages/service/service';
 
+import { Data } from '../provider/data';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -23,7 +25,7 @@ export class MyApp {
   
     pages: Array<{title: string, component: any}>;
   
-    constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+    constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, public data: Data) {
       this.initializeApp();
   
       // used for an example of ngFor and navigation
@@ -33,6 +35,14 @@ export class MyApp {
         { title: 'Profile', component: ProfilePage },
         { title: 'History', component: HistoryPage },
       ];
+
+      this.data.isLogin().then((value)=>{
+        if(value){
+             this.rootPage = HomePage;
+        } else {
+           this.rootPage = LoginPage;
+        }    
+      });
   
     }
   

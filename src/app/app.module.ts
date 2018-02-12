@@ -9,6 +9,7 @@ import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { Data } from '../provider/data';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,6 +20,11 @@ import { ProfilePage } from '../pages/profile/profile';
 import { HistoryPage } from '../pages/history/history';
 import { ServicePage } from '../pages/service/service';
 import { AddrepairPage } from '../pages/addrepair/addrepair';
+
+import { Http } from '@angular/http';
+import { HttpModule } from '@angular/http';
+import { IonicStorageModule } from '@ionic/storage';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +43,10 @@ import { AddrepairPage } from '../pages/addrepair/addrepair';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule,
+    IonicStorageModule.forRoot(),
+    
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -58,7 +67,9 @@ import { AddrepairPage } from '../pages/addrepair/addrepair';
     StatusBar,
     SplashScreen,
     Camera,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Data
+
   ]
 })
 export class AppModule {}

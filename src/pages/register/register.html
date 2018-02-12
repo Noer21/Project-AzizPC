@@ -16,17 +16,17 @@
       <ion-list >
         <ion-item>
           <ion-label floating><p class="Head">Nama</p></ion-label>
-          <ion-input class="Head2" [(ngModel)]="name" name="name" type="text" #nama="ngModel" spellcheck="false" autocapitalize="off"
+          <ion-input class="Head2" [(ngModel)]="user.nama" name="name" type="text" #nama="ngModel" spellcheck="false" autocapitalize="off"
             required>
           </ion-input>
         </ion-item>
         <p ion-text [hidden]="nama.valid || submitted == false" color="danger" padding-left class="Warning">
         Nama harus diisi
-        </p>
+        </p> 
 
         <ion-item>
           <ion-label floating><p class="Head">Email</p></ion-label>
-          <ion-input class="Head2" [(ngModel)]="email" name="email" pattern="[^@\]+@[^@\]+\.[^@\s]+" type="email" #mail="ngModel" spellcheck="false" autocapitalize="off"
+          <ion-input class="Head2" [(ngModel)]="user.email" name="email" pattern="[^@\]+@[^@\]+\.[^@\s]+" type="email" #mail="ngModel" spellcheck="false" autocapitalize="off"
             required>
           </ion-input>
         </ion-item>
@@ -36,7 +36,7 @@
 
         <ion-item>
             <ion-label floating><p class="Head">Nomor Handphone</p></ion-label>
-            <ion-input class="Head2" [(ngModel)]="number" name="number" type="number" #nomor="ngModel" spellcheck="false" autocapitalize="off"
+            <ion-input class="Head2" [(ngModel)]="user.hp" name="number" type="number" #nomor="ngModel" spellcheck="false" autocapitalize="off"
               required>
             </ion-input>
           </ion-item>
@@ -46,7 +46,7 @@
   
         <ion-item>
           <ion-label floating><p class="Head">Password</p></ion-label>
-          <ion-input class="Head2"  [(ngModel)]="password" name="password" type="{{status}}" #pass="ngModel"  required>
+          <ion-input class="Head2"  [(ngModel)]="user.password" name="password" type="{{status}}" #pass="ngModel"  required>
           </ion-input>
           <button class="tombol" [hidden]="lihat == false" (click)="showPassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class='icon' color="primary2"> </ion-icon> </button>
           <button class="tombol" [hidden]="lihat == true" (click)="hidePassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class='icon' color="primary2"> </ion-icon> </button>
@@ -56,20 +56,21 @@
         </p>
 
         <ion-item>
-          <ion-label floating><p class="Head">Konfirmasi Password</p></ion-label>
-          <ion-input class="Head2"  [(ngModel)]="password2" name="password2" type="{{status2}}" #pass2="ngModel"  required>
+          <ion-label floating><p class="Head">Alamat</p></ion-label>
+          <ion-input class="Head2" [(ngModel)]="user.alamat" name="address" type="text" #alamat="ngModel" spellcheck="false" autocapitalize="off"
+            required>
           </ion-input>
-          <button class="tombol" [hidden]="lihat2 == false" (click)="showPassword2()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class='icon' color="primary2"> </ion-icon> </button>
-          <button class="tombol" [hidden]="lihat2 == true" (click)="hidePassword2()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class='icon' color="primary2"> </ion-icon> </button>
         </ion-item>
-        <div ion-text [hidden]="password2==password"  padding-left>
-          <p class="Warning" color="danger" *ngIf="password2!=null">Password salah</p>
-        </div>
+        <p ion-text [hidden]="alamat.valid || submitted == false" color="danger" padding-left class="Warning">
+        Alamat harus diisi
+        </p> 
+
+
       </ion-list>
   
       <ion-row>
         <ion-col>
-          <button class="ButtonMasuk" ion-button color="AyoDermawan" (click)="signUp()" block><p class="ButtonWord">Buat</p></button>
+          <button class="ButtonMasuk" ion-button color="AyoDermawan" (click)="signUp(registerForm)" block><p class="ButtonWord">Buat</p></button>
         </ion-col>
       </ion-row>
   

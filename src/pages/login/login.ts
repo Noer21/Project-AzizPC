@@ -1,7 +1,11 @@
+import { Data } from '../../provider/data';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, LoadingController, ToastController } from 'ionic-angular';
 import { RegisterPage } from '../register/register';
 import { HomePage } from '../home/home';
+import { NgForm } from '@angular/forms';
+import { Http } from '@angular/http';
+
 
 /**
  * Generated class for the LoginPage page.
@@ -17,6 +21,8 @@ import { HomePage } from '../home/home';
 })
 export class LoginPage {
 
+  // user: {nama?: string, email?: string, password?: string, role?:string, hp?:string} = {};  
+  
   submitted = false;
   status = "password";
   lihat = true;
@@ -24,11 +30,43 @@ export class LoginPage {
   email: string;
   password: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public loadCtrl : LoadingController,
+              public http : Http,
+              public data : Data,
+              public toastCtrl : ToastController
+            ) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
+  }
+
+  sign(form : NgForm){
+    this.submitted = true;
+    let loading = this.loadCtrl.create({
+        content: 'Tunggu sebentar...'
+    });
+    console.log(this.email);
+    if(form.valid){
+      loading.present();
+      let input = JSON.stringify({
+        email : this.email,
+        password : this.password
+      });
+      this.http.post("http://127.0.0.1/AzisPc/BackEnd/login.php",input).subscribe(data =>{
+        let response = data.json();
+        if(response.status == 200){
+          let user = response.data;
+          console.log(user);
+          this.data.login(user);
+          this.navCtrl.setRoot(HomePage);
+          loading.dismiss();          
+        }
+        this.showAlert(response.message);        
+      })
+    }
   }
 
 
@@ -44,12 +82,23 @@ export class LoginPage {
     console.log(this.status);
   }
 
-  signUp() {
+  Register() {
     this.navCtrl.push(RegisterPage);
   }
 
-  signIn(){
-    this.navCtrl.setRoot(HomePage);
+  showAlert(message){
+    let toast = this.toastCtrl.create({
+      message: message,
+      duration: 3000
+    });
+    toast.present();
   }
+
+  signUp(){
+    this.navCtrl.setRoot(RegisterPage);
+  }
+
+
+
 
 }
