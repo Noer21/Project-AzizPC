@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Tambah Service</ion-title>
+    <ion-title>Tambah Servis</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -15,12 +15,12 @@
 
 <ion-content padding>
   <ion-list>
-    <h5 class="head"> Nama Barang</h5>
+    <h5 class="head">Nama Barang</h5>
     <ion-item>
       <ion-input type="text" placeholder="Ex. Laptop Asus ROG Gx600"></ion-input>
     </ion-item>
 
-    <h5 class="head"> Nama Barang</h5>
+    <h5 class="head">Keluhan</h5>
     <ion-item>
       <ion-textarea placeholder="Keluhan Ananda"></ion-textarea>
     </ion-item>
@@ -45,7 +45,7 @@
       </ion-item>
     </ion-list>
 
-    <h5 class="head">Jenis Service </h5>
+    <h5 class="head">Jenis Servis </h5>
     <ion-item>
         <ion-label>Jenis Service</ion-label>
         <ion-select [(ngModel)]="gaming" multiple="true">
@@ -68,11 +68,11 @@
         <ion-input type="text" placeholder="Ex. IPB dramaga"></ion-input>
       </ion-item>
 
-      <h5 class="head">Upload Foto Barang</h5>
+      <h5 class="head">Unggah Foto Barang</h5>
       <button ion-button icon-left (click)="takePhoto()">
         <ion-icon name="camera"></ion-icon>
         Ambil Foto
       </button>
-
   </ion-list>
+  <button ion-button full>Submit</button>
 </ion-content>

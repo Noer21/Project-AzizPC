@@ -3,6 +3,7 @@ import { LoginPage } from './../login/login';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, App, NavParams, AlertController } from 'ionic-angular';
 import { Data } from '../../provider/data';
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 
 /**
@@ -24,11 +25,15 @@ export class ProfilePage {
   hp : string;
   alamat : string;
 
+  public photos: any;
+  public base64Image: string;
+
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               public data : Data,
               public alertCtrl : AlertController,
-              public app : App  
+              public app : App,
+              private camera: Camera,  
             ) {
               this.data.getData().then((data) =>{
                 this.datas = data;
@@ -75,7 +80,26 @@ export class ProfilePage {
   }
 
   editProfil(){
-    this.navCtrl.setRoot(EditProfilePage, this.datas)
+    this.navCtrl.push(EditProfilePage, this.datas)
+  }
+
+  takePhoto(){
+    const options: CameraOptions = {
+      quality: 100,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE
+    }
+    
+    this.camera.getPicture(options).then((imageData) => {
+      // imageData is either a base64 encoded string or a file URI
+      // If it's base64:
+      this.base64Image = 'data:image/jpeg;base64,' + imageData;
+      this.photos.push(this.base64Image);
+      this.photos.revese();  
+    }, (err) => {
+     // Handle error
+    });
   }
 
 

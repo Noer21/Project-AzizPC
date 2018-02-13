@@ -30,10 +30,10 @@ export class MyApp {
   
       // used for an example of ngFor and navigation
       this.pages = [
-        { title: 'Home', component: HomePage },
-        { title: 'Service', component: ServicePage },
-        { title: 'Profile', component: ProfilePage },
-        { title: 'History', component: HistoryPage },
+        { title: 'Beranda', component: HomePage },
+        { title: 'Servis', component: ServicePage },
+        { title: 'Profil', component: ProfilePage },
+        { title: 'Riwayat', component: HistoryPage },
       ];
 
       this.data.isLogin().then((value)=>{
