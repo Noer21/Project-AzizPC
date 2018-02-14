@@ -1,3 +1,78 @@
 page-history {
-
+    .toolbar-title {
+        font-size: 2.3rem;
+        font-weight: 450;
+        text-align: center;
+        color: black;
+        pointer-events: auto;
+      }
+      ion-content {
+        background: linear-gradient(0deg, #f4f2f2 0%, white 80%, white 100%);
+      }
+    	.item p {
+        overflow: inherit;
+        margin: 0 0 2px;
+        font-size: 1.4rem;
+        line-height: normal;
+        text-overflow: inherit;
+        color: #6E0021;
+      }
+    
+       .toolbar-background {
+      background: white;
+      border-color: transparent;
+    }
+    
+      // .toolbar-title {
+      //   position: relative;
+      //   top: 2.5vh;
+      //   font-size: 2.3rem;
+      //   font-weight: 600;
+      //   text-align: center;
+      //   color: #fff;
+      //   pointer-events: auto;
+      //   height: 10vh;
+      // }
+    
+      .back-button {
+        color: #fff !important;
+      }
+      .segment-md .segment-button.activated, .segment-md .segment-button.segment-activated {
+        border-color: black; //ini warna Sumbangin
+        opacity: 1;
+      }
+    
+      .segment-md .segment-button{
+        color: black;
+      }
+    
+      ion-card{
+        color: #d71149;
+        border: 2px solid;
+      }
+    
+      .NamaBarang {
+        padding: 2vw 10vw 0 10vw;
+        color: #2c2f33;
+        font-size: 6vw;
+        font-weight: 600;
+      }
+      .NamaPanti {
+        position: relative;
+        bottom: 1vw;
+        padding: 2vw 10vw 0 10vw;
+        color: #2c2f33;
+        font-size: 4vw;
+      }
+      .Status {
+        padding: 4vw 10vw 2vw 10vw;
+        color: #2c2f33;
+        font-size: 3vw;
+      }
+      .Status2 {
+        color: #d71149;
+      }
+    
+      
+    
 }

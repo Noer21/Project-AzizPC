@@ -66,7 +66,7 @@ var EditProfilePage = (function () {
                 email: this.email,
                 id: this.id
             });
-            this.http.post("http://127.0.0.1/AzisPc/BackEnd/EditProfil.php", input).subscribe(function (data) {
+            this.http.post(this.data.link_hosting + "EditProfil.php", input).subscribe(function (data) {
                 loading.dismiss();
                 var response = data.json();
                 console.log(response);
@@ -99,14 +99,10 @@ var EditProfilePage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
             selector: 'page-edit-profile',template:/*ion-inline-start:"C:\Users\asus\Documents\GitHub\Project-AzizPC\src\pages\edit-profile\edit-profile.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Profile</ion-title>\n\n  </ion-navbar>\n\n</ion-header>  \n\n<ion-content>\n\n\n\n  <div class="photoprofile">\n\n    <ion-icon name="camera" class="editIcon"></ion-icon>\n\n    <img src="assets/imgs/logo.png" *ngIf="!image" class="Pict"/>\n\n  </div>\n\n    <img [src]="image" *ngIf="image"/>\n\n    <form #editForm="ngForm" novalidate>        \n\n        <ion-item padding-right text-wrap>\n\n          <ion-input class="Konten" value = "{{nama}}" [(ngModel)]="nama" [ngModelOptions]="{standalone: true}"> </ion-input>\n\n        </ion-item>\n\n        <ion-item padding-right text-wrap>\n\n          <ion-icon name="mail" item-left class="IconMail"></ion-icon>\n\n          <p class="Head">Email</p>\n\n          <p class="Konten">{{email}}</p>\n\n        </ion-item>\n\n        <ion-item padding-right text-wrap>\n\n          <ion-icon name="call" item-left class="Icon"></ion-icon>\n\n          <p class="Head">Nomor Telepon</p>\n\n          <ion-input class="Konten" value = "{{hp}}" [(ngModel)]="hp" [ngModelOptions]="{standalone: true}"> </ion-input>\n\n        </ion-item>\n\n        <ion-item padding-right text-wrap>\n\n          <ion-icon name="md-map" item-left class="Icon"></ion-icon>\n\n          <p class="Head">Alamat</p>\n\n          <ion-input class="Konten" value = "{{alamat}}" [(ngModel)]="alamat" [ngModelOptions]="{standalone: true}"> </ion-input>\n\n        </ion-item>\n\n        <ion-item padding-left-right>\n\n          <button class=\'Button\' color="AyoDermawan" ion-button block (click)=\'editProfil(editForm)\'><p class="ButtonWordWhite">Sunting</p></button>\n\n        </ion-item>\n\n    </form>\n\n</ion-content>\n\n    '/*ion-inline-end:"C:\Users\asus\Documents\GitHub\Project-AzizPC\src\pages\edit-profile\edit-profile.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_3__provider_data__["a" /* Data */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ToastController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_3__provider_data__["a" /* Data */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__provider_data__["a" /* Data */]) === "function" && _f || Object])
     ], EditProfilePage);
     return EditProfilePage;
+    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=edit-profile.js.map
@@ -249,7 +245,7 @@ var RegisterPage = (function () {
                 hp: this.user.hp,
                 alamat: this.user.alamat
             });
-            this.http.post("http://127.0.0.1/AzisPc/BackEnd/signUpInfo.php", input).subscribe(function (data) {
+            this.http.post(this.data.link_hosting + "signUpInfo.php", input).subscribe(function (data) {
                 loading.dismiss();
                 var response = data.json();
                 console.log(response);
@@ -282,14 +278,10 @@ var RegisterPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
             selector: 'page-register',template:/*ion-inline-start:"C:\Users\asus\Documents\GitHub\Project-AzizPC\src\pages\register\register.html"*/'<!--\n\n  Generated template for the RegisterPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n  <h2 class="title">Create New Account</h2>\n\n\n\n  <form #registerForm="ngForm" novalidate>\n\n      <ion-list >\n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Nama</p></ion-label>\n\n          <ion-input class="Head2" [(ngModel)]="user.nama" name="name" type="text" #nama="ngModel" spellcheck="false" autocapitalize="off"\n\n            required>\n\n          </ion-input>\n\n        </ion-item>\n\n        <p ion-text [hidden]="nama.valid || submitted == false" color="danger" padding-left class="Warning">\n\n        Nama harus diisi\n\n        </p> \n\n\n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Email</p></ion-label>\n\n          <ion-input class="Head2" [(ngModel)]="user.email" name="email" pattern="[^@\]+@[^@\]+\.[^@\s]+" type="email" #mail="ngModel" spellcheck="false" autocapitalize="off"\n\n            required>\n\n          </ion-input>\n\n        </ion-item>\n\n        <p ion-text [hidden]="mail.valid || submitted == false" color="danger" padding-left class="Warning">\n\n        Email harus diisi\n\n        </p>\n\n\n\n        <ion-item>\n\n            <ion-label floating><p class="Head">Nomor Handphone</p></ion-label>\n\n            <ion-input class="Head2" [(ngModel)]="user.hp" name="number" type="number" #nomor="ngModel" spellcheck="false" autocapitalize="off"\n\n              required>\n\n            </ion-input>\n\n          </ion-item>\n\n          <p ion-text [hidden]="nomor.valid || submitted == false" color="danger" padding-left class="Warning">\n\n          Nomor Handphone harus diisi\n\n          </p>\n\n  \n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Password</p></ion-label>\n\n          <ion-input class="Head2"  [(ngModel)]="user.password" name="password" type="{{status}}" #pass="ngModel"  required>\n\n          </ion-input>\n\n          <button class="tombol" [hidden]="lihat == false" (click)="showPassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n          <button class="tombol" [hidden]="lihat == true" (click)="hidePassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n        </ion-item>\n\n        <p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left class="Warning">\n\n          Password harus diisi\n\n        </p>\n\n\n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Alamat</p></ion-label>\n\n          <ion-input class="Head2" [(ngModel)]="user.alamat" name="address" type="text" #alamat="ngModel" spellcheck="false" autocapitalize="off"\n\n            required>\n\n          </ion-input>\n\n        </ion-item>\n\n        <p ion-text [hidden]="alamat.valid || submitted == false" color="danger" padding-left class="Warning">\n\n        Alamat harus diisi\n\n        </p> \n\n\n\n\n\n      </ion-list>\n\n  \n\n      <ion-row>\n\n        <ion-col>\n\n          <button class="ButtonMasuk" ion-button color="AyoDermawan" (click)="signUp(registerForm)" block><p class="ButtonWord">Buat</p></button>\n\n        </ion-col>\n\n      </ion-row>\n\n  \n\n      <ion-grid>\n\n        <ion-row>\n\n          <ion-col text-center>\n\n            <p class="Head">\n\n              <font color="black">Sudah punya akun?</font>\n\n              <a class="Link" (click)="signIn()"> Masuk.</a>\n\n            </p>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid>\n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\asus\Documents\GitHub\Project-AzizPC\src\pages\register\register.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ToastController */],
-            __WEBPACK_IMPORTED_MODULE_0__provider_data__["a" /* Data */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* Http */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ToastController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_0__provider_data__["a" /* Data */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__provider_data__["a" /* Data */]) === "function" && _f || Object])
     ], RegisterPage);
     return RegisterPage;
+    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=register.js.map
@@ -493,7 +485,7 @@ var HistoryPage = (function () {
     };
     HistoryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-history',template:/*ion-inline-start:"C:\Users\asus\Documents\GitHub\Project-AzizPC\src\pages\history\history.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>History</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\asus\Documents\GitHub\Project-AzizPC\src\pages\history\history.html"*/,
+            selector: 'page-history',template:/*ion-inline-start:"C:\Users\asus\Documents\GitHub\Project-AzizPC\src\pages\history\history.html"*/'<ion-header>\n\n    <ion-navbar color="kakiLima" no-border-bottom>\n\n      <ion-title>\n\n        Riwayat\n\n      </ion-title>\n\n    </ion-navbar>\n\n    <ion-toolbar no-border-top>\n\n      <ion-segment [(ngModel)]="options">\n\n        <ion-segment-button value="diproses">\n\n          Diproses\n\n        </ion-segment-button>\n\n        <ion-segment-button value="selesai">\n\n          Selesai\n\n        </ion-segment-button>\n\n      </ion-segment>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n  \n\n  \n\n  \n\n  <ion-content>\n\n    <div [ngSwitch]="options">\n\n  \n\n    <!-- List Code -->\n\n    <ion-list *ngSwitchCase="\'diproses\'">\n\n  \n\n     <ion-card *ngFor="let data of diproses.reverse()"(click)="logout(data)">\n\n  \n\n        <p class="NamaBarang">Nama Barang</p>\n\n        <p class="NamaPanti">RpHarga</p>\n\n        <!-- <p class="Status">Status: <a  class="Status2" *ngIf=\'data.kurir_nama != 0\'>Dalam Proses Pengiriman</a>  <a class="Status2" *ngIf=\'data.kurir_nama == 0\'>Yayasan sedang memilih kurir</a></p> -->        \n\n    </ion-card>\n\n  \n\n    </ion-list>\n\n  \n\n    <ion-list *ngSwitchCase="\'selesai\'">\n\n      <ion-card *ngFor="let data of selesai.reverse()">\n\n  \n\n        <p class="NamaBarang">Nama Barang</p>\n\n        <p class="NamaPanti">RpHarga</p>\n\n        <p class="Status">Status: <a class="Status2">Selesai</a></p>\n\n          \n\n      </ion-card>  \n\n    </ion-list>\n\n  \n\n    <!-- End of List Code -->\n\n  \n\n  \n\n  \n\n    </div>\n\n  </ion-content>\n\n  '/*ion-inline-end:"C:\Users\asus\Documents\GitHub\Project-AzizPC\src\pages\history\history.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], HistoryPage);
@@ -906,6 +898,8 @@ var Data = (function () {
     function Data(http, storage) {
         this.http = http;
         this.storage = storage;
+        this.link_local = "http://127.0.0.1/AzisPc/BackEnd/";
+        this.link_hosting = "http://azispc.codepanda.web.id/AzisPc/BackEnd/";
         this.HAS_LOGGED_IN = 'status_login';
         console.log('Hello data provider');
     }
@@ -938,9 +932,10 @@ var Data = (function () {
     };
     Data = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_storage__["b" /* Storage */]) === "function" && _b || Object])
     ], Data);
     return Data;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=data.js.map
@@ -1053,7 +1048,7 @@ var LoginPage = (function () {
                 email: this.email,
                 password: this.password
             });
-            this.http.post("http://127.0.0.1/AzisPc/BackEnd/login.php", input).subscribe(function (data) {
+            this.http.post(this.data.link_hosting + "login.php", input).subscribe(function (data) {
                 var response = data.json();
                 if (response.status == 200) {
                     var user = response.data;
@@ -1093,14 +1088,10 @@ var LoginPage = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
             selector: 'page-login',template:/*ion-inline-start:"C:\Users\asus\Documents\GitHub\Project-AzizPC\src\pages\login\login.html"*/'<ion-header>\n\n  \n\n  \n\n</ion-header>\n\n  \n\n  \n\n  <ion-content padding>\n\n    <img src="assets/imgs/LogoAzizPC.jpg" class=\'Logo\'>\n\n    <form #loginForm="ngForm" novalidate>\n\n      <ion-list >\n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Email</p></ion-label>\n\n          <ion-input class="Head2" [(ngModel)]="email" name="email" type="email" #user="ngModel" spellcheck="false" autocapitalize="off"\n\n            required>\n\n          </ion-input>\n\n        </ion-item>\n\n        <p ion-text [hidden]="user.valid || submitted == false" color="danger" padding-left class="Warning">\n\n        Email harus diisi\n\n        </p>\n\n  \n\n        <ion-item>\n\n          <ion-label floating><p class="Head">Password</p></ion-label>\n\n          <ion-input class="Head2"  [(ngModel)]="password" name="pass" type="{{status}}" #pass="ngModel"  required>\n\n          </ion-input>\n\n          <button class="tombol" [hidden]="lihat == false" (click)="showPassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n          <button class="tombol" [hidden]="lihat == true" (click)="hidePassword()" ion-button clear color="dark" type="button" item-right> <ion-icon name="md-eye-off" class=\'icon\' color="primary2"> </ion-icon> </button>\n\n        </ion-item>\n\n        <p ion-text [hidden]="pass.valid || submitted == false" color="danger" padding-left class="Warning">\n\n          Password harus diisi\n\n        </p>\n\n      </ion-list>\n\n  \n\n      <!--ini buat mock up-->\n\n      <ion-row>\n\n        <ion-col>\n\n          <button class="ButtonMasuk" ion-button color="AyoDermawan" (click)="sign(loginForm)" block><p class="ButtonWord">Masuk</p></button>\n\n        </ion-col>\n\n      </ion-row>\n\n  \n\n      <ion-grid>\n\n        <ion-row>\n\n          <ion-col text-center>\n\n            <p class="Head">\n\n              <font color="black">Tidak punya akun?</font>\n\n              <a class="Link" (click)="signUp()"> Buat akun.</a>\n\n            </p>\n\n          </ion-col>\n\n        </ion-row>\n\n      </ion-grid>\n\n  \n\n    </form>\n\n  \n\n  </ion-content>'/*ion-inline-end:"C:\Users\asus\Documents\GitHub\Project-AzizPC\src\pages\login\login.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* LoadingController */],
-            __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */],
-            __WEBPACK_IMPORTED_MODULE_0__provider_data__["a" /* Data */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ToastController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_http__["a" /* Http */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_0__provider_data__["a" /* Data */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__provider_data__["a" /* Data */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ToastController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ToastController */]) === "function" && _f || Object])
     ], LoginPage);
     return LoginPage;
+    var _a, _b, _c, _d, _e, _f;
 }());
 
 //# sourceMappingURL=login.js.map

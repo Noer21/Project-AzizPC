@@ -7,6 +7,10 @@ import { Storage } from '@ionic/storage';
 @Injectable()
 export class Data{
 
+	
+	public link_local = "http://127.0.0.1/AzisPc/BackEnd/";
+	public link_hosting = "http://azispc.codepanda.web.id/AzisPc/BackEnd/"
+
 	public HAS_LOGGED_IN = 'status_login';
 	constructor(public http: Http, public storage: Storage){
 		console.log('Hello data provider');
