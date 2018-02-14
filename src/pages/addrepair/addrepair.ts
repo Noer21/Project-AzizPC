@@ -57,5 +57,27 @@ export class AddrepairPage {
     alert.present();
   }
 
+  foto(){
+    let confirm = this.alertCtrl.create({ 
+      title: 'Unggah gambar', 
+      subTitle: 'Pilih sumber gambar', 
+      buttons: [ 
+        { 
+          text: 'Camera', 
+          handler: () => { 
+            this.takePhoto(); 
+          } 
+        }, 
+        { 
+          text: 'Galery', 
+          handler: () => { 
+            
+          } 
+        } 
+      ] 
+    }); 
+    confirm.present(); 
+  }
+
 }
   
