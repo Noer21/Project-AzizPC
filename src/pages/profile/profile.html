@@ -8,7 +8,7 @@
 </ion-header>  
 <ion-content>
   <div class="photoprofile">
-    <ion-icon name="camera" class="editIcon"></ion-icon>
+    <ion-icon name="camera" class="editIcon" (click)="takePhoto()"></ion-icon>
     <img src="assets/imgs/logo.png" *ngIf="!image" class="Pict"/>
   </div>
     <img [src]="image" *ngIf="image"/>  

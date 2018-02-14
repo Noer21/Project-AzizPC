@@ -98,6 +98,9 @@ export class LoginPage {
     this.navCtrl.setRoot(RegisterPage);
   }
 
+  skip(){
+    this.navCtrl.setRoot(HomePage);
+  }
 
 
 
