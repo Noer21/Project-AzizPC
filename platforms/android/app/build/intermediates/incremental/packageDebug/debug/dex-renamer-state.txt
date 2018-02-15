@@ -1,4 +1,4 @@
-#Tue Feb 13 02:12:14 PST 2018
+#Wed Feb 14 03:21:19 PST 2018
 base.0=D\:\\Project\\List\\Project-AzizPC\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 renamed.0=classes.dex
 file.0=D\:\\Project\\List\\Project-AzizPC\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

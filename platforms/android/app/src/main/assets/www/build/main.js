@@ -66,7 +66,7 @@ var EditProfilePage = (function () {
                 email: this.email,
                 id: this.id
             });
-            this.http.post("http://127.0.0.1/AzisPc/BackEnd/EditProfil.php", input).subscribe(function (data) {
+            this.http.post(this.data.link_hosting + "EditProfil.php", input).subscribe(function (data) {
                 loading.dismiss();
                 var response = data.json();
                 console.log(response);
@@ -249,7 +249,7 @@ var RegisterPage = (function () {
                 hp: this.user.hp,
                 alamat: this.user.alamat
             });
-            this.http.post("http://127.0.0.1/AzisPc/BackEnd/signUpInfo.php", input).subscribe(function (data) {
+            this.http.post(this.data.link_hosting + "signUpInfo.php", input).subscribe(function (data) {
                 loading.dismiss();
                 var response = data.json();
                 console.log(response);
@@ -503,7 +503,7 @@ var HistoryPage = (function () {
     };
     HistoryPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-history',template:/*ion-inline-start:"D:\Project\List\Project-AzizPC\src\pages\history\history.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>History</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\Project\List\Project-AzizPC\src\pages\history\history.html"*/,
+            selector: 'page-history',template:/*ion-inline-start:"D:\Project\List\Project-AzizPC\src\pages\history\history.html"*/'<ion-header>\n\n    <ion-navbar color="kakiLima" no-border-bottom>\n\n      <ion-title>\n\n        Riwayat\n\n      </ion-title>\n\n    </ion-navbar>\n\n    <ion-toolbar no-border-top>\n\n      <ion-segment [(ngModel)]="options">\n\n        <ion-segment-button value="diproses">\n\n          Diproses\n\n        </ion-segment-button>\n\n        <ion-segment-button value="selesai">\n\n          Selesai\n\n        </ion-segment-button>\n\n      </ion-segment>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n  \n\n  \n\n  \n\n  <ion-content>\n\n    <div [ngSwitch]="options">\n\n  \n\n    <!-- List Code -->\n\n    <ion-list *ngSwitchCase="\'diproses\'">\n\n  \n\n     <ion-card *ngFor="let data of diproses.reverse()"(click)="logout(data)">\n\n  \n\n        <p class="NamaBarang">Nama Barang</p>\n\n        <p class="NamaPanti">RpHarga</p>\n\n        <!-- <p class="Status">Status: <a  class="Status2" *ngIf=\'data.kurir_nama != 0\'>Dalam Proses Pengiriman</a>  <a class="Status2" *ngIf=\'data.kurir_nama == 0\'>Yayasan sedang memilih kurir</a></p> -->        \n\n    </ion-card>\n\n  \n\n    </ion-list>\n\n  \n\n    <ion-list *ngSwitchCase="\'selesai\'">\n\n      <ion-card *ngFor="let data of selesai.reverse()">\n\n  \n\n        <p class="NamaBarang">Nama Barang</p>\n\n        <p class="NamaPanti">RpHarga</p>\n\n        <p class="Status">Status: <a class="Status2">Selesai</a></p>\n\n          \n\n      </ion-card>  \n\n    </ion-list>\n\n  \n\n    <!-- End of List Code -->\n\n  \n\n  \n\n  \n\n    </div>\n\n  </ion-content>\n\n  '/*ion-inline-end:"D:\Project\List\Project-AzizPC\src\pages\history\history.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], HistoryPage);
@@ -916,6 +916,8 @@ var Data = (function () {
     function Data(http, storage) {
         this.http = http;
         this.storage = storage;
+        this.link_local = "http://127.0.0.1/AzisPc/BackEnd/";
+        this.link_hosting = "http://azispc.codepanda.web.id/AzisPc/BackEnd/";
         this.HAS_LOGGED_IN = 'status_login';
         console.log('Hello data provider');
     }
@@ -1063,7 +1065,7 @@ var LoginPage = (function () {
                 email: this.email,
                 password: this.password
             });
-            this.http.post("http://127.0.0.1/AzisPc/BackEnd/login.php", input).subscribe(function (data) {
+            this.http.post(this.data.link_hosting + "login.php", input).subscribe(function (data) {
                 var response = data.json();
                 if (response.status == 200) {
                     var user = response.data;

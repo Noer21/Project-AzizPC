@@ -25797,6 +25797,76 @@ page-edit-profile .ButtonWordBlack {
   color: #f53d3d;
 }
 
+page-history .toolbar-title {
+  font-size: 2.3rem;
+  font-weight: 450;
+  text-align: center;
+  color: black;
+  pointer-events: auto;
+}
+
+page-history ion-content {
+  background: -webkit-gradient(linear, left bottom, left top, from(#f4f2f2), color-stop(80%, white), to(white));
+  background: linear-gradient(0deg, #f4f2f2 0%, white 80%, white 100%);
+}
+
+page-history .item p {
+  overflow: inherit;
+  margin: 0 0 2px;
+  font-size: 1.4rem;
+  line-height: normal;
+  text-overflow: inherit;
+  color: #6E0021;
+}
+
+page-history .toolbar-background {
+  background: white;
+  border-color: transparent;
+}
+
+page-history .back-button {
+  color: #fff !important;
+}
+
+page-history .segment-md .segment-button.activated, page-history .segment-md .segment-button.segment-activated {
+  border-color: black;
+  opacity: 1;
+}
+
+page-history .segment-md .segment-button {
+  color: black;
+}
+
+page-history ion-card {
+  color: #d71149;
+  border: 2px solid;
+}
+
+page-history .NamaBarang {
+  padding: 2vw 10vw 0 10vw;
+  color: #2c2f33;
+  font-size: 6vw;
+  font-weight: 600;
+}
+
+page-history .NamaPanti {
+  position: relative;
+  bottom: 1vw;
+  padding: 2vw 10vw 0 10vw;
+  color: #2c2f33;
+  font-size: 4vw;
+}
+
+page-history .Status {
+  padding: 4vw 10vw 2vw 10vw;
+  color: #2c2f33;
+  font-size: 3vw;
+}
+
+page-history .Status2 {
+  color: #d71149;
+}
+
 page-home .Status {
   font-size: 46 px !important;
   text-align: left;

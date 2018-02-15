@@ -90,6 +90,7 @@ export class AddrepairPage {
     alert.present();
   }
 
+<<<<<<< HEAD
   repair(form : NgForm){
     this.submitted = true;
     let loading = this.loadCtrl.create({
@@ -158,6 +159,28 @@ export class AddrepairPage {
       duration: 3000
     });
     toast.present();
+=======
+  foto(){
+    let confirm = this.alertCtrl.create({ 
+      title: 'Unggah gambar', 
+      subTitle: 'Pilih sumber gambar', 
+      buttons: [ 
+        { 
+          text: 'Camera', 
+          handler: () => { 
+            this.takePhoto(); 
+          } 
+        }, 
+        { 
+          text: 'Galery', 
+          handler: () => { 
+            
+          } 
+        } 
+      ] 
+    }); 
+    confirm.present(); 
+>>>>>>> c180bacc96a979983f16839a19ff3b5732d34690
   }
 
 }

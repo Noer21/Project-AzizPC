@@ -1,52 +1,50 @@
 <ion-header>
-    <ion-navbar color="kakiLima" no-border-bottom>
-      <ion-title>
-        Riwayat
-      </ion-title>
-    </ion-navbar>
-    <ion-toolbar no-border-top>
-      <ion-segment [(ngModel)]="options">
-        <ion-segment-button value="diproses">
-          Diproses
-        </ion-segment-button>
-        <ion-segment-button value="selesai">
-          Selesai
-        </ion-segment-button>
-      </ion-segment>
-    </ion-toolbar>
-  </ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Riwayat</ion-title>
+  </ion-navbar>
+</ion-header>
   
   
   
   <ion-content>
-    <div [ngSwitch]="options">
-  
-    <!-- List Code -->
-    <ion-list *ngSwitchCase="'diproses'">
-  
-     <ion-card *ngFor="let data of diproses.reverse()"(click)="logout(data)">
-  
-        <p class="NamaBarang">Nama Barang</p>
-        <p class="NamaPanti">RpHarga</p>
-        <!-- <p class="Status">Status: <a  class="Status2" *ngIf='data.kurir_nama != 0'>Dalam Proses Pengiriman</a>  <a class="Status2" *ngIf='data.kurir_nama == 0'>Yayasan sedang memilih kurir</a></p> -->        
+    <ion-card>
+      <img src="assets/imgs/LogoAzizPC.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+            Lenovo Yoga
+          </ion-card-title>
+            <p class="Status"> Status: Selesai</p>
+            <h3 class="Link">
+              <a (click)="detail()"> Detail </a>
+            </h3>
+        </ion-card-content>
     </ion-card>
-  
-    </ion-list>
-  
-    <ion-list *ngSwitchCase="'selesai'">
-      <ion-card *ngFor="let data of selesai.reverse()">
-  
-        <p class="NamaBarang">Nama Barang</p>
-        <p class="NamaPanti">RpHarga</p>
-        <p class="Status">Status: <a class="Status2">Selesai</a></p>
-          
-      </ion-card>  
-    </ion-list>
-  
-    <!-- End of List Code -->
-  
-  
-  
-    </div>
+    <ion-card>
+      <img src="assets/imgs/LogoAzizPC.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+            Lenovo Yoga
+          </ion-card-title>
+            <p class="Status"> Status: Dibatalkan</p>
+            <h3 class="Link">
+              <a (click)="detail()"> Detail </a>
+            </h3>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <img src="assets/imgs/LogoAzizPC.jpg"/>
+        <ion-card-content>
+          <ion-card-title>
+            Lenovo Yoga
+          </ion-card-title>
+            <p class="Status"> Status: Diagnosa</p>
+            <h3 class="Link">
+              <a (click)="detail()"> Detail </a>
+            </h3>
+        </ion-card-content>
+    </ion-card>
   </ion-content>
   
