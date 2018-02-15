@@ -90,7 +90,7 @@ export class RegisterPage {
         hp : this.user.hp,
         alamat : this.user.alamat
       });
-      this.http.post(this.data.link_hosting+"signUpInfo.php",input).subscribe(data => {
+      this.http.post(this.data.link_local+"signUpInfo.php",input).subscribe(data => {
         loading.dismiss();
         let response = data.json();
         console.log(response);

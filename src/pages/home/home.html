@@ -8,11 +8,11 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
+  <ion-card *ngFor="let data of servisan">
     <img src="assets/imgs/LogoAzizPC.jpg"/>
       <ion-card-content>
         <ion-card-title>
-          Lenovo Yoga
+          {{data.namaBarang}}
         </ion-card-title>
           <p class="Status"> Status: Diagnosa</p>
           <h3 class="Link">
@@ -21,7 +21,7 @@
            
       </ion-card-content>
   </ion-card>
-  <ion-card>
+  <!-- <ion-card>
       <img src="assets/imgs/rusak.jpeg"/>
         <ion-card-content>
           <ion-card-title>
@@ -32,7 +32,7 @@
               responsible for bringing the music to a mass audience.
             </p>
         </ion-card-content>
-    </ion-card>
+    </ion-card> -->
     <ion-fab right bottom>
       <button ion-fab color="light" (click)="add()"><ion-icon name="add"></ion-icon></button>
     </ion-fab>
