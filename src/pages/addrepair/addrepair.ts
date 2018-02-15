@@ -97,20 +97,20 @@ export class AddrepairPage {
     });
 
     if(form.valid){
-      console.log(this.namaBarang);
-      console.log(this.id);
-      console.log(this.keluhan);
-      console.log(this.service[0]);
-      console.log(this.alamat);
-      loading.present();
+      // console.log(this.namaBarang);
+      // console.log(this.id);
+      // console.log(this.keluhan);
+      // console.log(this.service[0]);
+      // console.log(this.alamat);
+      // loading.present();
 
-      let kelengkapan = 'charger = '+this.charger + '\n' +  
-                         'mouse = '+ this.mouse + '\n' + 
-                         'mushrooms = '+ this.mushrooms + '\n' +
+      let kelengkapan = 'charger = '+this.charger + ',' +  
+                         'mouse = '+ this.mouse + ',' + 
+                         'mushrooms = '+ this.mushrooms + ',' +
                          'cd = '+this.cd;
 
       // let services = this.service[0] + ',' + this.service[1] + this.service[2] + this.service[3] + this.service[4] + this.service[5] + this.service[6] + this.service[7] + this.service[]
-      console.log(kelengkapan);
+      // console.log(kelengkapan);
       // console.log(services);
 
       // for(var j=0, i = 0; i< this.service.length-1; i+2){
@@ -118,18 +118,18 @@ export class AddrepairPage {
       //      this.services  = this.service[i] + ', ' + this.service[i+1];
       // }
 
-      console.log(this.services);
-
       let input = JSON.stringify({
         id_Customer : this.id, 
         namaBarang : this.namaBarang,
         keluhan : this.keluhan,
         kelengkapan : kelengkapan,
-        service : kelengkapan,
+        service : this.keluhan,
         alamat : this.alamat
       });
 
-      this.http.post(this.data.link_local+"addRepair.php", input).subscribe(data =>{
+      console.log("input", input)
+
+      this.http.post(this.data.link_hosting+"addRepair.php", input).subscribe(data =>{
         loading.dismiss();
         let response = data.json();
         console.log(response);

@@ -40,7 +40,7 @@ export class HomePage {
         content: 'Tunggu sebentar...'
     });
     loading.present();
-    this.http.get(this.data.link_local+"getPesanan.php").subscribe(data =>{
+    this.http.get(this.data.link_hosting+"getPesanan.php").subscribe(data =>{
       loading.dismiss();
       let response = data.json(); 
       console.log(response);

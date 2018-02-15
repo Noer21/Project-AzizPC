@@ -165,7 +165,7 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(31);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__login_login__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_home__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__home_home__ = __webpack_require__(34);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -249,7 +249,7 @@ var RegisterPage = (function () {
                 hp: this.user.hp,
                 alamat: this.user.alamat
             });
-            this.http.post(this.data.link_local + "signUpInfo.php", input).subscribe(function (data) {
+            this.http.post(this.data.link_hosting + "signUpInfo.php", input).subscribe(function (data) {
                 loading.dismiss();
                 var response = data.json();
                 console.log(response);
@@ -396,7 +396,7 @@ var DetailPage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddrepairPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_home__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__home_home__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__provider_data__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(11);
@@ -483,33 +483,33 @@ var AddrepairPage = (function () {
             content: 'Tunggu sebentar...'
         });
         if (form.valid) {
-            console.log(this.namaBarang);
-            console.log(this.id);
-            console.log(this.keluhan);
-            console.log(this.service[0]);
-            console.log(this.alamat);
-            loading.present();
-            var kelengkapan = 'charger = ' + this.charger + '\n' +
-                'mouse = ' + this.mouse + '\n' +
-                'mushrooms = ' + this.mushrooms + '\n' +
+            // console.log(this.namaBarang);
+            // console.log(this.id);
+            // console.log(this.keluhan);
+            // console.log(this.service[0]);
+            // console.log(this.alamat);
+            // loading.present();
+            var kelengkapan = 'charger = ' + this.charger + ',' +
+                'mouse = ' + this.mouse + ',' +
+                'mushrooms = ' + this.mushrooms + ',' +
                 'cd = ' + this.cd;
             // let services = this.service[0] + ',' + this.service[1] + this.service[2] + this.service[3] + this.service[4] + this.service[5] + this.service[6] + this.service[7] + this.service[]
-            console.log(kelengkapan);
+            // console.log(kelengkapan);
             // console.log(services);
             // for(var j=0, i = 0; i< this.service.length-1; i+2){
             //     if(i+2 < this.service.length-1)
             //      this.services  = this.service[i] + ', ' + this.service[i+1];
             // }
-            console.log(this.services);
             var input = JSON.stringify({
                 id_Customer: this.id,
                 namaBarang: this.namaBarang,
                 keluhan: this.keluhan,
                 kelengkapan: kelengkapan,
-                service: kelengkapan,
+                service: this.keluhan,
                 alamat: this.alamat
             });
-            this.http.post(this.data.link_local + "addRepair.php", input).subscribe(function (data) {
+            console.log("input", input);
+            this.http.post(this.data.link_hosting + "addRepair.php", input).subscribe(function (data) {
                 loading.dismiss();
                 var response = data.json();
                 console.log(response);
@@ -737,7 +737,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(83);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_about_about__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_contact_contact__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_home_home__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_tabs_tabs__ = __webpack_require__(289);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__provider_data__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(204);
@@ -922,7 +922,7 @@ var Data = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_profile_profile__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_history_history__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_service_service__ = __webpack_require__(207);
@@ -1009,7 +1009,7 @@ var MyApp = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__about_about__ = __webpack_require__(208);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact_contact__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(34);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1041,7 +1041,7 @@ var TabsPage = (function () {
 
 /***/ }),
 
-/***/ 42:
+/***/ 34:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1090,7 +1090,7 @@ var HomePage = (function () {
             content: 'Tunggu sebentar...'
         });
         loading.present();
-        this.http.get(this.data.link_local + "getPesanan.php").subscribe(function (data) {
+        this.http.get(this.data.link_hosting + "getPesanan.php").subscribe(function (data) {
             loading.dismiss();
             var response = data.json();
             console.log(response);
@@ -1140,7 +1140,7 @@ var HomePage = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__home_home__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_http__ = __webpack_require__(31);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1192,9 +1192,10 @@ var LoginPage = (function () {
                 email: this.email,
                 password: this.password
             });
-            this.http.post(this.data.link_local + "login.php", input).subscribe(function (data) {
+            this.http.post(this.data.link_hosting + "login.php", input).subscribe(function (data) {
                 var response = data.json();
                 if (response.status == 200) {
+                    console.log("masuk");
                     var user = response.data;
                     console.log(user);
                     _this.data.login(user);

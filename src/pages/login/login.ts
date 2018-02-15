@@ -55,9 +55,10 @@ export class LoginPage {
         email : this.email,
         password : this.password
       });
-      this.http.post(this.data.link_local+"login.php",input).subscribe(data =>{
+      this.http.post(this.data.link_hosting+"login.php",input).subscribe(data =>{
         let response = data.json();
         if(response.status == 200){
+          console.log("masuk");
           let user = response.data;
           console.log(user);
           this.data.login(user);
